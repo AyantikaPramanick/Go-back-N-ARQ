@@ -55,7 +55,9 @@ class Receiver:
             new_packet = Packet(_type=self.packetType['ack'], seqNo=self.seqNo, segmentData='Acknowledgement Packet', sender=self.name, dest=sender).makePacket()
             self.receiverToChannel.send(new_packet)
 
-
+    # Function to discard a packet
+    def discardPacket(self):
+        return 0
    
   
     def startReceiving(self):
