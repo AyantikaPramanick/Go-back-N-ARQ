@@ -40,6 +40,13 @@ class Sender:
         return rec
 
         
+    #Function to get the file handle for the input file
+    def openFile(self, filename):
+        try:
+            file = open(filename, 'r')
+        except IOError:
+            sys.exit("FILE NON EXISTANT!")
+            return file
     
     def checkAcknowledgement(self):
         time.sleep(0.1)
