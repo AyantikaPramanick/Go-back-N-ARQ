@@ -109,4 +109,7 @@ def execute():
 
     for i in receiverProcess:
         i.join()
-
+        
+        
+if __name__ == "__main__":
+    execute()
