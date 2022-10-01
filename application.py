@@ -56,7 +56,11 @@ def execute():
     senderList = []
     receiverList = []
 
-    
+    #Create a list of the senders
+    for i in range(constants.TOT_SENDER):
+        sender = Sender( i, 'input'+str(i)+'.txt', WHOS2CP[i], RHOC2SP[i])
+        senderList.append(sender)
+
     
     #Create a list of the receivers
     for i in range(constants.TOT_RECEIVER):
